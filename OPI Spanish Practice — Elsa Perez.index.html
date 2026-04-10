@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///Users/epmacmini/Downloads/opi_practice_elsa_perez_8.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPI Spanish Practice — Elsa Perez, PhD</title>
+<link href="./OPI Spanish Practice — Elsa Perez, PhD_files/css2" rel="stylesheet">
+<style>
+:root {
+  --navy: #00263A;
+  --blue: #003F6B;
+  --gold: #6B7280;
+  --gold-light: #9CA3AF;
+  --gold-pale: #F3F4F6;
+  --white: #FFFFFF;
+  --off-white: #F7F5F0;
+  --text: #1a1a2e;
+  --text-muted: #4a5568;
+  --border: #dde3ea;
+  --success: #2d6a4f;
+  --success-bg: #d8f3dc;
+  --info-bg: #e8f4fd;
+  --info: #1a6fa8;
+  --warn: #374151;
+  --warn-bg: #F3F4F6;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 2px 12px rgba(0,38,58,0.1);
+  --shadow-lg: 0 8px 32px rgba(0,38,58,0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--off-white);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── HEADER ── */
+header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, #005580 100%);
+  color: var(--white);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -60px;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: rgba(107,114,128,0.12);
+  pointer-events: none;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; left: 40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 2rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.header-left { flex: 1; min-width: 260px; }
+.usu-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: .75rem;
+}
+.usu-logo-block {
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: .02em;
+  line-height: 1.2;
+}
+.usu-name {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.3;
+}
+.usu-name strong { color: var(--white); display: block; font-size: 14px; }
+h1.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: .3rem;
+}
+.site-subtitle { font-size: 14px; color: rgba(255,255,255,0.75); }
+.header-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+.person-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  backdrop-filter: blur(4px);
+}
+.person-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  font-weight: 600;
+}
+.person-meta { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+.gold-line {
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), transparent);
+}
+
+/* ── NAV TABS ── */
+.nav-bar {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-tab {
+  padding: .75rem 1.1rem;
+  color: rgba(255,255,255,0.65);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: all .2s;
+  letter-spacing: .01em;
+}
+.nav-tab:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+.nav-tab.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+/* ── MAIN LAYOUT ── */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── SECTIONS ── */
+.section { display: none; animation: fadeIn .25s ease; }
+.section.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── CARDS ── */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-title .icon {
+  width: 28px; height: 28px;
+  background: var(--gold-pale);
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* ── BADGES ── */
+.badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: .02em;
+}
+.badge-navy { background: var(--navy); color: var(--white); }
+.badge-gold { background: #6B7280; color: var(--white); }
+.badge-success { background: var(--success-bg); color: var(--success); }
+.badge-info { background: var(--info-bg); color: var(--info); }
+.badge-warn { background: var(--warn-bg); color: var(--warn); }
+
+/* ── METRIC GRID ── */
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.metric {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold);
+}
+.metric .num { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; color: var(--navy); }
+.metric .lbl { font-size: 12.5px; color: var(--text-muted); margin-top: 3px; }
+
+/* ── GRID ── */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+
+/* ── FACT BOXES ── */
+.fact-box {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-left: 4px solid var(--gold);
+}
+.fact-label { font-size: 11px; font-weight: 600; letter-spacing: .08em; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
+.fact-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.fact-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+/* ── SCALE BARS ── */
+.scale-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.scale-row:last-child { border-bottom: none; }
+.scale-name { font-size: 13px; font-weight: 600; min-width: 130px; color: var(--navy); }
+.scale-bar-wrap { flex: 1; height: 8px; background: #eef0f3; border-radius: 4px; overflow: hidden; }
+.scale-bar { height: 100%; border-radius: 4px; transition: width .6s cubic-bezier(.4,0,.2,1); }
+.scale-note { font-size: 12px; color: var(--text-muted); min-width: 180px; }
+
+/* ── QUESTION SECTION ── */
+.cat-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.cat-tab {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all .15s;
+}
+.cat-tab:hover { border-color: var(--gold); color: var(--navy); }
+.cat-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+.question-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  border-left: 5px solid var(--navy);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+.q-cat-label { font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+.q-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); line-height: 1.55; margin-bottom: 1rem; }
+.q-tip {
+  background: var(--gold-pale);
+  border-left: 3px solid var(--gold);
+  padding: .75rem 1rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+.q-tip strong { color: var(--warn); }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .15s;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.btn:hover { background: var(--navy); color: var(--white); }
+.btn:active { transform: scale(.97); }
+.btn-gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
+}
+.btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); color: var(--navy); }
+.btn-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 1rem; }
+
+.progress-bar { height: 5px; background: #eef0f3; border-radius: 3px; overflow: hidden; margin: 1rem 0 0; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--navy), var(--gold)); border-radius: 3px; transition: width .35s; }
+
+/* ── FLASHCARDS ── */
+.fc-wrap { perspective: 1200px; margin-bottom: 1.25rem; }
+.fc-inner {
+  position: relative;
+  min-height: 220px;
+  transform-style: preserve-3d;
+  transition: transform .45s ease;
+  cursor: pointer;
+}
+.fc-inner.flipped { transform: rotateY(180deg); }
+.fc-face {
+  position: absolute;
+  width: 100%;
+  min-height: 220px;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+.fc-front {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: var(--white);
+}
+.fc-back {
+  background: var(--white);
+  border: 1.5px solid var(--gold);
+  color: var(--text);
+  transform: rotateY(180deg);
+}
+.fc-front .fc-q { font-family: 'Playfair Display', serif; font-size: 1.05rem; line-height: 1.55; color: var(--white); }
+.fc-front .fc-hint { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 1rem; }
+.fc-back .fc-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.fc-back .fc-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+.fc-controls { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.fc-counter { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: .75rem; }
+
+/* ── MOCK EXAM ── */
+.exam-intro {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.exam-intro::after {
+  content: '';
+  position: absolute;
+  right: -30px; top: -30px;
+  width: 150px; height: 150px;
+  background: rgba(196,151,47,0.15);
+  border-radius: 50%;
+}
+.exam-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--white); margin-bottom: .3rem; }
+.exam-meta { font-size: 13px; color: rgba(255,255,255,0.7); }
+.exam-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.exam-tab {
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all .15s;
+}
+.exam-tab:hover { border-color: var(--navy); color: var(--navy); }
+.exam-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+.exam-stage {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--border);
+}
+.stage-num {
+  width: 32px; height: 32px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  flex-shrink: 0;
+}
+.stage-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--navy); }
+.stage-time { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+
+.exchange {
+  background: #f8f9fb;
+  border-radius: var(--radius);
+  padding: .85rem 1rem;
+  margin-bottom: .75rem;
+  border-left: 3px solid var(--border);
+}
+.exchange.tester { border-left-color: var(--navy); }
+.exchange.candidate { border-left-color: var(--gold); }
+.exch-label { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 4px; }
+.exch-label.t { color: var(--navy); }
+.exch-label.c { color: var(--gold); }
+.exch-text { font-size: 14px; color: var(--text); line-height: 1.65; }
+.exch-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; font-style: italic; }
+
+.rubric-box {
+  background: var(--gold-pale);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+.rubric-title { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--warn); margin-bottom: .5rem; }
+.rubric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+.rubric-item { background: var(--white); border-radius: 8px; padding: .6rem .8rem; }
+.rubric-item .r-label { font-size: 11px; font-weight: 600; color: var(--gold); letter-spacing: .04em; }
+.rubric-item .r-val { font-size: 13px; color: var(--navy); margin-top: 2px; font-weight: 500; }
+
+/* ── UTAH COURTS ── */
+.step-list { list-style: none; counter-reset: steps; }
+.step-item {
+  counter-increment: steps;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  width: 30px; height: 30px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.step-num.gold { background: var(--gold); }
+.step-content .step-name { font-weight: 600; font-size: 14px; color: var(--navy); }
+.step-content .step-desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+
+.tier-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.tier-row:last-child { border-bottom: none; }
+.tier-badge { min-width: 120px; }
+.tier-bar-wrap { flex: 1; height: 10px; background: #eef0f3; border-radius: 5px; overflow: hidden; }
+.tier-bar { height: 100%; border-radius: 5px; }
+.tier-note { font-size: 12px; color: var(--text-muted); min-width: 200px; }
+
+/* ── SUPERIOR CRITERIA ── */
+.crit-block {
+  border-left: 4px solid var(--navy);
+  padding: .75rem 1rem;
+  margin-bottom: .75rem;
+  background: var(--white);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.crit-block:nth-child(2) { border-left-color: var(--gold); }
+.crit-block:nth-child(3) { border-left-color: #2d6a4f; }
+.crit-block:nth-child(4) { border-left-color: #7c3f00; }
+.crit-name { font-weight: 600; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+.crit-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.65; }
+
+/* ── QUOTE BLOCK ── */
+.quote-block {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  position: relative;
+}
+.quote-mark { font-size: 3rem; line-height: 1; color: var(--gold); font-family: 'Playfair Display', serif; opacity: .8; }
+.quote-text { font-family: 'Playfair Display', serif; font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.92); margin-top: .25rem; }
+.quote-source { font-size: 11.5px; color: rgba(255,255,255,0.5); margin-top: .75rem; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 12.5px;
+}
+footer strong { color: var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  h1.site-title { font-size: 1.5rem; }
+  .header-right { width: 100%; text-align: left; }
+  .nav-tab { padding: .6rem .75rem; font-size: 12.5px; }
+  .fc-face { padding: 1.25rem; }
+}
+
+/* ── PRINT STYLE ── */
+@media print {
+  .nav-bar, .btn-row { display: none; }
+  .section { display: block !important; page-break-before: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="usu-lockup">
+        <div class="usu-logo-block">USU</div>
+        <div class="usu-name">
+          <strong>Utah State University</strong>
+          Center for Translation and Interpretation Studies
+        </div>
+      </div>
+      <h1 class="site-title">OPI Spanish<br>Practice Hub</h1>
+      <p class="site-subtitle">ACTFL Guidelines 2024 · BYU CLS FACT Framework · Utah Courts Certification</p>
+    </div>
+    <div class="header-right">
+      <div class="person-card">
+        <div class="person-name">Elsa Perez, PhD</div>
+        <div class="person-meta">Utah State University</div>
+        <div style="margin-top:8px;display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;">
+          <span class="badge badge-gold">Superior Level</span>
+          <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">OPI Spanish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+</header>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <button class="nav-tab" onclick="showSection(&#39;overview&#39;)">Overview</button>
+    <button class="nav-tab" onclick="showSection(&#39;scale&#39;)">Rating Scale</button>
+    <button class="nav-tab" onclick="showSection(&#39;questions&#39;)">Practice Questions</button>
+    <button class="nav-tab" onclick="showSection(&#39;flashcards&#39;)">Flashcards</button>
+    <button class="nav-tab" onclick="showSection(&#39;superior&#39;)">Superior Criteria</button>
+    <button class="nav-tab active" onclick="showSection(&#39;mock&#39;)">Mock OPI Exams</button>
+    <button class="nav-tab" onclick="showSection(&#39;utah&#39;)">Utah Courts Path</button>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- ══ OVERVIEW ══ -->
+<section id="overview" class="section">
+  <div class="metrics">
+    <div class="metric">
+      <div class="num">15–30</div>
+      <div class="lbl">Minutes per interview</div>
+    </div>
+    <div class="metric">
+      <div class="num">Superior</div>
+      <div class="lbl">Required for Approved status</div>
+    </div>
+    <div class="metric">
+      <div class="num">4 stages</div>
+      <div class="lbl">Warm-up → Level checks → Probes → Wind-down</div>
+    </div>
+    <div class="metric">
+      <div class="num">2 raters</div>
+      <div class="lbl">Independent double-blind scoring</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">📋</div>How the OPI works</div>
+    <p style="color:var(--text-muted);margin-bottom:1rem;">A certified ACTFL tester conducts a live phone interview. The tester uses two question types to identify your <strong>floor</strong> (highest sustained level) and <strong>ceiling</strong> (where performance breaks down).</p>
+    <div class="grid2">
+      <div style="background:#f0f4f8;border-radius:var(--radius);padding:1rem;">
+        <div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">Level Checks</div>
+        <p style="font-size:13px;color:var(--text-muted);">Questions at the level where you perform consistently — establishes your floor. The highest proficiency level the test-taker can sustain.</p>
+      </div>
+      <div style="background:#f0f4f8;border-radius:var(--radius);padding:1rem;">
+        <div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">Probes</div>
+        <p style="font-size:13px;color:var(--text-muted);">Questions one level above — establishes the ceiling where performance breaks down. Raters must elicit evidence of linguistic breakdown.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🎓</div>FACT Framework — BYU CLS</div>
+    <p style="color:var(--text-muted);font-size:13px;margin-bottom:1rem;">Developed at BYU's Center for Language Studies in collaboration with ACTFL, this framework organizes OPI evaluation around four holistic criteria:</p>
+    <div class="grid2">
+      <div class="fact-box">
+        <div class="fact-label">F — Function</div>
+        <div class="fact-title">What can you do?</div>
+        <div class="fact-desc">Narrate, argue, hypothesize, support opinions with structured argument — across familiar and unfamiliar topics.</div>
+      </div>
+      <div class="fact-box">
+        <div class="fact-label">A — Accuracy</div>
+        <div class="fact-title">How well understood?</div>
+        <div class="fact-desc">Grammar, vocabulary, pronunciation, fluency, pragmatic and sociolinguistic competence — holistically evaluated.</div>
+      </div>
+      <div class="fact-box">
+        <div class="fact-label">C — Content</div>
+        <div class="fact-title">Is the response on topic?</div>
+        <div class="fact-desc">Appropriate for context, setting, and register. Formal and informal settings handled with equal ease at Superior level.</div>
+      </div>
+      <div class="fact-box">
+        <div class="fact-label">T — Text Type</div>
+        <div class="fact-title">How is discourse organized?</div>
+        <div class="fact-desc">Extended, coherent, thesis-driven discourse. Superior speakers produce paragraphs, not just sentences — with logical structure.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="border-top:3px solid var(--gold)">
+    <div class="card-title"><div class="icon">⚖️</div>Assessment criteria summary</div>
+    <table style="width:100%;border-collapse:collapse;font-size:13.5px;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--navy);">
+          <th style="text-align:left;padding:.5rem .75rem;color:var(--navy);">Criterion</th>
+          <th style="text-align:left;padding:.5rem .75rem;color:var(--navy);">Superior requirement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.5rem .75rem;font-weight:600;color:var(--navy);">Function</td><td style="padding:.5rem .75rem;color:var(--text-muted);">Argues, hypothesizes, and discusses abstract topics consistently</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.5rem .75rem;font-weight:600;color:var(--navy);">Accuracy</td><td style="padding:.5rem .75rem;color:var(--text-muted);">Errors don't impede comprehension; strong command of complex grammar</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.5rem .75rem;font-weight:600;color:var(--navy);">Content</td><td style="padding:.5rem .75rem;color:var(--text-muted);">Formal/informal/professional/academic topics all accessible</td></tr>
+        <tr><td style="padding:.5rem .75rem;font-weight:600;color:var(--navy);">Text type</td><td style="padding:.5rem .75rem;color:var(--text-muted);">Extended coherent discourse; organized thesis-driven argument</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══ RATING SCALE ══ -->
+<section id="scale" class="section">
+  <div class="card">
+    <div class="card-title"><div class="icon">📊</div>ACTFL proficiency scale</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:1.25rem;">The OPI measures Novice through Superior. <strong>Utah Courts Approved Interpreter</strong> status requires a <span class="badge badge-gold">Superior</span> rating.</p>
+    <div id="scale-rows"><div class="scale-row"><div class="scale-name">Superior</div><div class="scale-bar-wrap"><div class="scale-bar" style="width: 100%; background: rgb(0, 38, 58);" data-pct="100"></div></div><div class="scale-note">Consistent argument, hypothesis, abstract discourse</div></div><div class="scale-row"><div class="scale-name">Advanced High</div><div class="scale-bar-wrap"><div class="scale-bar" style="width: 82%; background: rgb(29, 94, 58);" data-pct="82"></div></div><div class="scale-note">Some abstract; breaks down on complex tasks</div></div><div class="scale-row"><div class="scale-name">Advanced Mid</div><div class="scale-bar-wrap"><div class="scale-bar" style="width: 66%; background: rgb(45, 106, 79);" data-pct="66"></div></div><div class="scale-note">Narrates and describes in all time frames</div></div><div class="scale-row"><div class="scale-name">Advanced Low</div><div class="scale-bar-wrap"><div class="scale-bar" style="width: 52%; background: rgb(196, 151, 47);" data-pct="52"></div></div><div class="scale-note">Paragraph-level discourse; some abstract</div></div><div class="scale-row"><div class="scale-name">Intermediate High</div><div class="scale-bar-wrap"><div class="scale-bar" style="width: 37%; background: rgb(232, 160, 32);" data-pct="37"></div></div><div class="scale-note">Creates with language; handles complications</div></div><div class="scale-row"><div class="scale-name">Intermediate Mid</div><div class="scale-bar-wrap"><div class="scale-bar" style="width: 24%; background: rgb(217, 119, 6);" data-pct="24"></div></div><div class="scale-note">Sentence-level; basic transactions</div></div><div class="scale-row"><div class="scale-name">Novice High</div><div class="scale-bar-wrap"><div class="scale-bar" style="width: 11%; background: rgb(180, 83, 9);" data-pct="11"></div></div><div class="scale-note">Memorized phrases; single words</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🔍</div>Superior vs. Advanced High — the decisive distinction</div>
+    <div class="grid2">
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--success);margin-bottom:.6rem;">✓ Superior</div>
+        <ul style="font-size:13.5px;color:var(--text-muted);line-height:2;padding-left:1.2rem;">
+          <li>Argues and hypothesizes <em>consistently</em></li>
+          <li>Abstract discourse beyond personal experience</li>
+          <li>Structured argument with supported opinions</li>
+          <li>Handles linguistically unfamiliar situations</li>
+          <li>Extended, coherent discourse with ease</li>
+          <li>Full control of all Superior functions</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#9b2c2c;margin-bottom:.6rem;">✗ Advanced High — not enough</div>
+        <ul style="font-size:13.5px;color:var(--text-muted);line-height:2;padding-left:1.2rem;">
+          <li>Discusses some topics abstractly</li>
+          <li>More comfortable with concrete discussion</li>
+          <li>Language breaks down on complex tasks</li>
+          <li>May avoid Superior tasks or over-simplify</li>
+          <li>Compensates well but has systematic gaps</li>
+          <li>Great fluency may mask functional limits</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-mark">"</div>
+    <div class="quote-text">At the Superior level, a speaker needs to show consistent ability to elaborate abstractly on issues, provide structured arguments to support opinions, and hypothesize to explore possible outcomes or consequences, all beyond the realm of personal experience. Speakers lacking these functional abilities will not be at the Superior level, even if they demonstrate unusually strong fluency, lexical or structural control of the language.</div>
+    <div class="quote-source">— ACTFL OPI ACE Report, Publication No. AAR/OPI/ACE/I--2020-002</div>
+  </div>
+</section>
+
+<!-- ══ PRACTICE QUESTIONS ══ -->
+<section id="questions" class="section">
+  <div style="margin-bottom:1.25rem;">
+    <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:.25rem;">Superior-Level Practice Questions</div>
+    <p style="font-size:13px;color:var(--text-muted);">All questions are calibrated to the Superior level. Select a category and work through each prompt aloud, then review the coaching note.</p>
+  </div>
+  <div class="cat-tabs" id="qCatTabs"><button class="cat-tab active">Social Policy</button><button class="cat-tab">Legal &amp; Court</button><button class="cat-tab">Ethics &amp; Society</button><button class="cat-tab">Economics</button><button class="cat-tab">Culture &amp; Language</button></div>
+  <div class="question-box">
+    <div class="q-cat-label" id="qCatLabel">Social Policy · Question 1 of 20</div>
+    <div class="q-text" id="qText">¿Cuáles son las consecuencias a largo plazo de la desigualdad económica en las sociedades modernas?</div>
+    <div class="q-tip" id="qTip"><strong>Coaching:</strong> Structure: state thesis → provide 2–3 concrete examples → connect to an abstract principle. Avoid mere listing of facts. Use: en consecuencia, cabe señalar que, sin embargo.</div>
+  </div>
+  <div class="btn-row">
+    <button class="btn" onclick="prevQuestion()">← Previous</button>
+    <button class="btn btn-gold" onclick="nextQuestion()">Next question →</button>
+    <span style="font-size:13px;color:var(--text-muted);margin-left:4px;" id="qCounter">1 / 20</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="qProgress" style="width: 5%;"></div></div>
+</section>
+
+<!-- ══ FLASHCARDS ══ -->
+<section id="flashcards" class="section">
+  <div style="margin-bottom:1.25rem;">
+    <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:.25rem;">Superior-Level Flashcards</div>
+    <p style="font-size:13px;color:var(--text-muted);">Click the card to flip and reveal the coaching note. Navigate with the buttons below.</p>
+  </div>
+  <div class="fc-wrap">
+    <div class="fc-inner" id="fcInner" onclick="flipCard()">
+      <div class="fc-face fc-front">
+        <div class="fc-q" id="fcFront">¿Cómo se construye un argumento estructurado de nivel Superior?</div>
+        <div class="fc-hint">Click to reveal coaching note</div>
+      </div>
+      <div class="fc-face fc-back">
+        <div class="fc-label">Coaching note</div>
+        <div class="fc-a" id="fcBack">Tesis → Evidencia 1 (con ejemplo concreto) → Evidencia 2 (con contraste) → Concesión ("si bien es cierto que...") → Conclusión reforzada. Never just describe — always argue a defensible position.</div>
+      </div>
+    </div>
+  </div>
+  <div class="fc-counter" id="fcCounter">Card 1 of 14</div>
+  <div class="progress-bar" style="max-width:400px;margin:.5rem auto 1rem;"><div class="progress-fill" id="fcProgress" style="width: 7%;"></div></div>
+  <div class="fc-controls">
+    <button class="btn" onclick="fcNav(-1)">← Previous</button>
+    <button class="btn" onclick="flipCard()">Flip card</button>
+    <button class="btn btn-gold" onclick="fcNav(1)">Next →</button>
+  </div>
+</section>
+
+<!-- ══ SUPERIOR CRITERIA ══ -->
+<section id="superior" class="section">
+  <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;">Superior Level — Full Criteria &amp; Guidance</div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🎯</div>Function — What you must be able to do</div>
+    <div class="crit-block">
+      <div class="crit-name">Support opinions with structured argument</div>
+      <div class="crit-desc">Thesis → evidence → counterargument → rebuttal → conclusion. Not just describing, but actively arguing a position and defending it.</div>
+    </div>
+    <div class="crit-block">
+      <div class="crit-name">Hypothesize and explore possibilities</div>
+      <div class="crit-desc">Use conditional and subjunctive to explore "what if" scenarios. Critical for Superior — cannot be absent. Example: "Si se implementara esa política, las consecuencias serían..."</div>
+    </div>
+    <div class="crit-block">
+      <div class="crit-name">Discuss topics outside personal experience</div>
+      <div class="crit-desc">Abstract societal, political, philosophical, and professional topics. You don't need personal experience with the topic to discuss it fluently and substantively.</div>
+    </div>
+    <div class="crit-block">
+      <div class="crit-name">Manage linguistically unfamiliar situations</div>
+      <div class="crit-desc">When you don't know a word, circumlocute. Never stop or say "no sé esa palabra." Paraphrase: "lo que en inglés se llama..." or "lo que podríamos describir como..."</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">✍️</div>Text type — How discourse is organized</div>
+    <p style="font-size:13.5px;color:var(--text-muted);margin-bottom:.75rem;">Superior speakers produce extended, organized, thesis-driven discourse — not just paragraphs of concrete description.</p>
+    <div class="grid2">
+      <div style="background:#f0f4f8;border-radius:var(--radius);padding:1rem;">
+        <div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">Required connectors</div>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.8;">sin embargo · no obstante · en consecuencia · por consiguiente · si bien es cierto que · a pesar de ello · cabe señalar que · en contraposición a</p>
+      </div>
+      <div style="background:#f0f4f8;border-radius:var(--radius);padding:1rem;">
+        <div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">Response architecture</div>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.8;">Thesis statement → Evidence with example → Counterargument acknowledged → Rebuttal → Broader implication or call</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🔊</div>Accuracy — Grammar markers of Superior</div>
+    <div class="grid3">
+      <div style="padding:.75rem;background:#f0f4f8;border-radius:var(--radius);font-size:13px;color:var(--text-muted)"><strong style="display:block;color:var(--navy);margin-bottom:3px;">Subjunctive</strong>Imperfect and pluperfect subjunctive fluently used in hypothetical and concessive clauses.</div>
+      <div style="padding:.75rem;background:#f0f4f8;border-radius:var(--radius);font-size:13px;color:var(--text-muted)"><strong style="display:block;color:var(--navy);margin-bottom:3px;">Conditional</strong>Simple and perfect conditional for hypothesizing outcomes and speculating about consequences.</div>
+      <div style="padding:.75rem;background:#f0f4f8;border-radius:var(--radius);font-size:13px;color:var(--text-muted)"><strong style="display:block;color:var(--navy);margin-bottom:3px;">Register control</strong>Formal, informal, and legal register switching — critical for Utah court interpreter certification.</div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-mark">"</div>
+    <div class="quote-text">The waste dumped upstream has certainly polluted the area, and this is a definite cause for concern, even alarm. Now, we recognize that without those factories there would be less pollution, but there would be a great number of people out of work as well. You couldn't expect employees to stand up against their own companies in support of the environment, because they would risk losing their jobs. Just the same, if these employees could be guaranteed that there would be no negative repercussions for speaking their minds, I'm sure that they would call for greater controls regarding disposal of waste products…</div>
+    <div class="quote-source">— Sample Superior response, Explanatory Notes to OPI Tester Training Manual (via BYU CLS Preparing for the OPI guide)</div>
+  </div>
+</section>
+
+<!-- ══ MOCK OPI EXAMS ══ -->
+<section id="mock" class="section active">
+  <div class="exam-intro">
+    <div class="exam-title">4 Full Mock OPI Examinations</div>
+    <div class="exam-meta">Each exam simulates the complete OPI structure: Warm-up → Level checks → Superior probes → Wind-down · Scoring rubric included · Candidate profile: Bilingual Paralegal (Spanish-English) · Utah Courts Approved Interpreter target</div>
+  </div>
+
+  <div class="exam-tabs">
+    <button class="exam-tab active" onclick="showExam(0)">Exam 1 — Social Policy</button>
+    <button class="exam-tab" onclick="showExam(1)">Exam 2 — Legal &amp; Ethics</button>
+    <button class="exam-tab" onclick="showExam(2)">Exam 3 — Economics &amp; Society</button>
+    <button class="exam-tab" onclick="showExam(3)">Exam 4 — Court Interpreting</button>
+  </div>
+
+  <div id="examContent"><div style="margin-bottom:1rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+    <span class="badge badge-navy">Topics: immigration, social inequality, public health policy</span>
+    <span class="badge" style="background:#f0f4f8;color:var(--text-muted);">25–30 minutes simulated</span>
+  </div><div class="exam-stage">
+      <div class="stage-header">
+        <div class="stage-num">1</div>
+        <div class="stage-name">Warm-Up</div>
+        <div class="stage-time">~3 min</div>
+      </div><div class="exchange tester">
+        <div class="exch-label t">Tester</div>
+        <div class="exch-text">Hola, buenos días. Soy su examinadora de hoy. Esta entrevista será en español. Primero me gustaría conocerla un poco. Cuénteme, ¿dónde vive usted actualmente y a qué se dedica?</div>
+        <div class="exch-note">Tester establishes comfort level. Answer naturally and expansively.</div>
+      </div><div class="exchange candidate">
+        <div class="exch-label c">Paralegal (Spanish-English)</div>
+        <div class="exch-text">Buenos días. Trabajo como asistente legal en un bufete de abogados aquí en Utah, con especialización en derecho de inmigración y derecho penal. Gran parte de mi trabajo implica comunicarme directamente con clientes hispanohablantes y asistir a los abogados en la preparación de casos.</div>
+        <div class="exch-note">Strong warm-up: professional, confident, uses complete sentences.</div>
+      </div><div class="exchange tester">
+        <div class="exch-label t">Tester</div>
+        <div class="exch-text">¡Qué interesante! ¿Qué es lo que más disfruta de su trabajo?</div>
+        
+      </div><div class="exchange candidate">
+        <div class="exch-label c">Paralegal (Spanish-English)</div>
+        <div class="exch-text">Lo que más valoro es el impacto directo que tiene mi trabajo en la vida de las personas. Muchos de nuestros clientes llegan sin entender el sistema legal y sin saber qué derechos tienen. Poder explicarles el proceso, en su propio idioma y con claridad, marca una diferencia real. También disfruto la complejidad del derecho — cada caso es distinto y requiere análisis cuidadoso.</div>
+        <div class="exch-note">Extended, personal, fluent — good warm-up register.</div>
+      </div></div><div class="exam-stage">
+      <div class="stage-header">
+        <div class="stage-num">2</div>
+        <div class="stage-name">Level Check — Advanced</div>
+        <div class="stage-time">~7 min</div>
+      </div><div class="exchange tester">
+        <div class="exch-label t">Tester</div>
+        <div class="exch-text">Me ha mencionado que trabaja con clientes hispanohablantes en el ámbito legal. Cuénteme, ¿cómo ha cambiado la tecnología la manera en que los bufetes de abogados atienden a clientes de habla hispana en los últimos años?</div>
+        <div class="exch-note">Advanced-level: narrate change over time.</div>
+      </div><div class="exchange candidate">
+        <div class="exch-label c">Paralegal (Spanish-English)</div>
+        <div class="exch-text">En mi trabajo diario como asistente legal veo directamente cómo la tecnología ha cambiado el acceso a la información jurídica. Antes, los clientes llegaban completamente desorientados; hoy, muchos ya han investigado en línea, han visto videos en YouTube sobre sus derechos, o han usado traductores automáticos para leer documentos. Eso ha cambiado la dinámica: los abogados ahora tienen que lidiar tanto con clientes mejor informados como con malentendidos generados por información incorrecta o mal traducida.</div>
+        <div class="exch-note">Good Advanced response: narrates change across time frames, uses connectors.</div>
+      </div><div class="exchange tester">
+        <div class="exch-label t">Tester</div>
+        <div class="exch-text">¿Y cuáles son los mayores desafíos que enfrentan sus clientes hispanohablantes al navegar el sistema legal estadounidense?</div>
+        
+      </div><div class="exchange candidate">
+        <div class="exch-label c">Paralegal (Spanish-English)</div>
+        <div class="exch-text">Los retos son múltiples. El primero es la barrera del idioma, por supuesto, pero más allá de eso está la desconfianza institucional — muchos clientes han tenido experiencias negativas con autoridades en sus países de origen y traen ese miedo al sistema aquí. El segundo reto es la complejidad burocrática: formularios, plazos, terminología legal que ni siquiera es clara para hablantes nativos de inglés. Y el tercero es económico: muchos no pueden pagar representación legal completa y dependen de servicios de asistencia limitada.</div>
+        
+      </div></div><div class="exam-stage">
+      <div class="stage-header">
+        <div class="stage-num">3</div>
+        <div class="stage-name">Superior Probe — Argument</div>
+        <div class="stage-time">~10 min</div>
+      </div><div class="exchange tester">
+        <div class="exch-label t">Tester</div>
+        <div class="exch-text">Usted mencionó los desafíos de inmigración en su comunidad. Desde su perspectiva, ¿en qué medida es responsable el Estado de integrar lingüística y culturalmente a los inmigrantes, y en qué medida es responsabilidad del individuo?</div>
+        <div class="exch-note">SUPERIOR PROBE: Argues abstract social responsibility. Must show structured argument.</div>
+      </div><div class="exchange candidate">
+        <div class="exch-label c">Paralegal (Spanish-English)</div>
+        <div class="exch-text">Esta es una pregunta que toca valores fundamentales en tensión: la solidaridad colectiva versus la autonomía individual. En mi opinión, la responsabilidad es compartida, pero no equitativa. El Estado tiene la obligación de crear condiciones estructurales — acceso a educación lingüística, servicios en el idioma de origen, protección legal — porque sin ese andamiaje, la integración se convierte en una carga individual imposible de asumir. Sin embargo, el inmigrante también tiene un compromiso activo: participar en los procesos de aprendizaje, involucrarse en la comunidad. La integración exitosa no ocurre por decreto, sino a través de un contrato social bidireccional. Ignorar la responsabilidad estatal es culpar a la víctima de condiciones que ella no creó.</div>
+        <div class="exch-note">SUPERIOR: Thesis stated → both sides argued → rebuttal → principled conclusion → extended discourse.</div>
+      </div><div class="exchange tester">
+        <div class="exch-label t">Tester</div>
+        <div class="exch-text">¿Qué pasaría si el Estado decidiera eliminar por completo los programas de educación bilingüe en las escuelas públicas?</div>
+        <div class="exch-note">SUPERIOR PROBE: Hypothesize consequences.</div>
+      </div><div class="exchange candidate">
+        <div class="exch-label c">Paralegal (Spanish-English)</div>
+        <div class="exch-text">Si se eliminaran los programas de educación bilingüe, las consecuencias serían profundas y multidimensionales. A corto plazo, los estudiantes de herencia lingüística perderían el único espacio formal donde su idioma es valorado académicamente. A largo plazo, veríamos un empobrecimiento cognitivo comprobado — la investigación neurocientífica es clara sobre los beneficios del bilingüismo en la función ejecutiva. Además, desde una perspectiva de derechos, estaríamos hablando de una forma de asimilación forzada que históricamente ha generado trauma cultural. No sería únicamente una política educativa; sería una declaración sobre qué idiomas y qué comunidades considera valiosas el Estado.</div>
+        <div class="exch-note">SUPERIOR: Hypothesizes across time frames, abstract consequences, uses evidence, connects to broader principle.</div>
+      </div></div><div class="exam-stage">
+      <div class="stage-header">
+        <div class="stage-num">4</div>
+        <div class="stage-name">Wind-Down</div>
+        <div class="stage-time">~3 min</div>
+      </div><div class="exchange tester">
+        <div class="exch-label t">Tester</div>
+        <div class="exch-text">Ha sido una conversación muy enriquecedora. Por último, ¿qué planes tiene para el próximo semestre?</div>
+        <div class="exch-note">Wind-down returns to comfort zone. Answer warmly and naturally.</div>
+      </div><div class="exchange candidate">
+        <div class="exch-label c">Paralegal (Spanish-English)</div>
+        <div class="exch-text">El próximo semestre tengo previsto terminar un artículo sobre autoevaluación en la competencia oral, y también iniciar un nuevo proyecto de investigación sobre el uso del OPI en contextos de certificación profesional. Y, por supuesto, seguir preparando a mis estudiantes para sus propias evaluaciones de competencia lingüística.</div>
+        
+      </div></div><div class="rubric-box">
+    <div class="rubric-title">FACT scoring rubric — this exam</div>
+    <div class="rubric-grid">
+      <div class="rubric-item"><div class="r-label">Function</div><div class="r-val">Argues social responsibility, hypothesizes consequences across time frames</div></div>
+      <div class="rubric-item"><div class="r-label">Accuracy</div><div class="r-val">Complex grammar sustained; subjunctive and conditional used accurately</div></div>
+      <div class="rubric-item"><div class="r-label">Content</div><div class="r-val">Abstract social policy topics handled with depth and nuance</div></div>
+      <div class="rubric-item"><div class="r-label">Text type</div><div class="r-val">Extended thesis-driven discourse; organized, logical, no breakdown</div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ UTAH COURTS PATH ══ -->
+<section id="utah" class="section">
+  <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:1.25rem;">Utah Courts Interpreter Certification Path</div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">🏛️</div>Credential tiers (highest to lowest)</div>
+    <div class="tier-row"><div class="tier-badge"><span class="badge badge-success">Certified</span></div><div class="tier-bar-wrap"><div class="tier-bar" style="width:100%;background:#2d6a4f"></div></div><div class="tier-note">5-day training + 3-part NCSC exam · Highest tier</div></div>
+    <div class="tier-row"><div class="tier-badge"><span class="badge badge-gold">Approved ← target</span></div><div class="tier-bar-wrap"><div class="tier-bar" style="width:72%;background:var(--gold)"></div></div><div class="tier-note">OPI Superior rating · Your goal with this tool</div></div>
+    <div class="tier-row"><div class="tier-badge"><span class="badge badge-info">Registered</span></div><div class="tier-bar-wrap"><div class="tier-bar" style="width:42%;background:#378ADD"></div></div><div class="tier-note">Written exam + Code of Professional Responsibility only</div></div>
+    <div class="tier-row"><div class="tier-badge"><span class="badge" style="background:#f7e9e9;color:#9b2c2c;">Cond. Approved</span></div><div class="tier-bar-wrap"><div class="tier-bar" style="width:15%;background:#E24B4A"></div></div><div class="tier-note">Background check only · Vetted per case</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><div class="icon">📋</div>Steps to Approved status via OPI</div>
+    <ol class="step-list">
+      <li class="step-item"><div class="step-num">1</div><div class="step-content"><div class="step-name">Pass English written diagnostic exam</div><div class="step-desc">Demonstrates English fluency required for court interpreting</div></div></li>
+      <li class="step-item"><div class="step-num">2</div><div class="step-content"><div class="step-name">Pass Code of Professional Responsibility test</div><div class="step-desc">Ethics and conduct requirements for court interpreters</div></div></li>
+      <li class="step-item"><div class="step-num">3</div><div class="step-content"><div class="step-name">Complete 2-day orientation</div><div class="step-desc">Overview of Utah court procedures, interpreter roles, and protocols</div></div></li>
+      <li class="step-item"><div class="step-num">4</div><div class="step-content"><div class="step-name">Pass background check</div><div class="step-desc">Criminal background verification by Utah Courts</div></div></li>
+      <li class="step-item"><div class="step-num">5</div><div class="step-content"><div class="step-name">Complete 10 hours of in-court observation</div><div class="step-desc">Observe a certified court interpreter in active Utah courtroom proceedings</div></div></li>
+      <li class="step-item"><div class="step-num gold">6</div><div class="step-content"><div class="step-name" style="color:var(--gold);">Pass ACTFL OPI with Superior rating ← this tool prepares you here</div><div class="step-desc">Administered by Language Testing International (LTI) · $200 UT residents · $400 non-residents · Phone interview 15–30 min · Double-blind rated</div></div></li>
+    </ol>
+  </div>
+
+  <div class="card" style="border-top:3px solid var(--gold)">
+    <div class="card-title"><div class="icon">📌</div>Key logistics</div>
+    <div class="grid2">
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Exam scheduler</div><p style="font-size:13.5px;color:var(--text-muted);">Language Testing International (LTI) at languagetesting.com</p></div>
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Format</div><p style="font-size:13.5px;color:var(--text-muted);">Live phone interview · 15–30 minutes · Digitally recorded · Independently double-rated</p></div>
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Cross-state recognition</div><p style="font-size:13.5px;color:var(--text-muted);">A Superior OPI rating from another state is recognized as Approved status in Utah</p></div>
+      <div><div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Continuing education</div><p style="font-size:13.5px;color:var(--text-muted);">16 hours every 2 years · Min. 4 hours ethics · Certified interpreters only</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Prepared by <strong>Elsa Perez, PhD</strong> · Utah State University · Center for Translation and Interpretation Studies · Based on ACTFL OPI Guidelines 2024 · BYU CLS FACT Framework · Utah Courts Language Access Program
+</footer>
+
+<script>
+// ═══════════════════════════════════════════
+// NAV
+// ═══════════════════════════════════════════
+const sectionOrder=['overview','scale','questions','flashcards','superior','mock','utah'];
+function showSection(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-tab')[sectionOrder.indexOf(id)].classList.add('active');
+  if(id==='scale')renderScaleBars();
+  if(id==='questions'){renderQTabs();renderQ();}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ═══════════════════════════════════════════
+// SCALE
+// ═══════════════════════════════════════════
+const scaleData=[
+  {name:'Superior',pct:100,color:'#00263A',desc:'Consistent argument, hypothesis, abstract discourse'},
+  {name:'Advanced High',pct:82,color:'#1D5E3A',desc:'Some abstract; breaks down on complex tasks'},
+  {name:'Advanced Mid',pct:66,color:'#2d6a4f',desc:'Narrates and describes in all time frames'},
+  {name:'Advanced Low',pct:52,color:'#C4972F',desc:'Paragraph-level discourse; some abstract'},
+  {name:'Intermediate High',pct:37,color:'#E8A020',desc:'Creates with language; handles complications'},
+  {name:'Intermediate Mid',pct:24,color:'#d97706',desc:'Sentence-level; basic transactions'},
+  {name:'Novice High',pct:11,color:'#b45309',desc:'Memorized phrases; single words'},
+];
+const scaleContainer=document.getElementById('scale-rows');
+let scaleBarsRendered=false;
+function renderScaleBars(){
+  if(scaleBarsRendered)return;
+  scaleBarsRendered=true;
+  scaleContainer.innerHTML=scaleData.map(d=>`<div class="scale-row"><div class="scale-name">${d.name}</div><div class="scale-bar-wrap"><div class="scale-bar" style="width:0%;background:${d.color}" data-pct="${d.pct}"></div></div><div class="scale-note">${d.desc}</div></div>`).join('');
+  setTimeout(()=>{document.querySelectorAll('.scale-bar').forEach(b=>{b.style.width=b.dataset.pct+'%';});},300);
+}
+
+// ═══════════════════════════════════════════
+// QUESTIONS
+// ═══════════════════════════════════════════
+const qData={
+  'Social Policy':[
+    {q:'¿Cuáles son las consecuencias a largo plazo de la desigualdad económica en las sociedades modernas?',tip:'Structure: state thesis → provide 2–3 concrete examples → connect to an abstract principle. Avoid mere listing of facts. Use: en consecuencia, cabe señalar que, sin embargo.'},
+    {q:'¿Debe el gobierno limitar el acceso a las redes sociales para proteger la salud mental de los jóvenes? Defienda su postura.',tip:'Take a position and defend it. Acknowledge the counterargument, then rebut. Connectors: si bien es cierto que, no obstante, en definitiva.'},
+    {q:'¿Cómo afecta la inmigración a la identidad cultural de un país receptor? Explore aspectos positivos y negativos.',tip:'Weighing multiple perspectives is a Superior hallmark. Avoid one-sided responses. Hypothesize: "Si los países adoptaran políticas de integración, el resultado sería..."'},
+    {q:'Si pudiera reformar el sistema de justicia penal, ¿qué cambios priorizaría y por qué?',tip:'Hypothetical (Si pudiera...) = Superior probe. Use imperfect subjunctive fluently. Build a prioritized argument, not just a wish list.'},
+    {q:'¿Es el bienestar social responsabilidad del Estado o del individuo? Argumente su posición con evidencia.',tip:'Classic Superior thesis question. Show you can argue both sides before defending your position. Don\'t just describe — argue.'},
+    {q:'¿Debería el voto ser obligatorio en una democracia? Analice las implicaciones para la participación cívica.',tip:'Democratic theory at the abstract level. Use: legitimidad democrática, representación, apatía política, coerción estatal, voluntad popular.'},
+    {q:'¿En qué medida es el sistema educativo responsable de perpetuar o reducir la desigualdad social?',tip:'Systems-level causal argument. Vocabulary: movilidad social, reproducción cultural, equidad educativa, segregación escolar, acceso igualitario.'},
+    {q:'¿Cómo debería una sociedad abordar el problema de la vivienda inasequible en las ciudades? Proponga y defienda un enfoque.',tip:'Policy proposal question = Superior function. Give a specific position with reasoned justification. Use: política habitacional, especulación inmobiliaria, subsidio estatal, zonificación inclusiva.'},
+    {q:'¿Tiene el Estado la obligación de garantizar un ingreso mínimo universal? ¿Qué argumentos apoyan o rechazan esta idea?',tip:'Abstract social contract debate. Structure: thesis → economic argument → social argument → counterargument → conclusion. Avoid listing without arguing.'},
+    {q:'¿Qué papel debe jugar el gobierno en la regulación de la inteligencia artificial para proteger los derechos ciudadanos?',tip:'Contemporary abstract topic. Use: privacidad de datos, sesgo algorítmico, regulación tecnológica, derechos digitales, transparencia. Hypothesize consequences.'},
+    {q:'¿Es la meritocracia un ideal alcanzable o un mito que encubre las desigualdades estructurales?',tip:'Philosophical + social policy. Argue: define meritocracia → identify structural barriers → conclusion about its limits or feasibility. Use: privilegio sistémico, igualdad de oportunidades, capital cultural.'},
+    {q:'¿Deben las políticas de acción afirmativa seguir siendo una herramienta para corregir desigualdades históricas?',tip:'Contested policy debate. Take a side and sustain it. Vocabulary: discriminación positiva, reparación histórica, mérito individual, diversidad institucional.'},
+    {q:'¿Cómo afecta el cambio climático de manera desproporcionada a las comunidades más vulnerables? ¿Qué responsabilidad tienen los países desarrollados?',tip:'Environmental justice + global responsibility. Use: justicia climática, vulnerabilidad estructural, emisiones históricas, deuda ecológica, responsabilidad diferenciada.'},
+    {q:'¿Debería el servicio militar ser obligatorio para todos los ciudadanos? Argumente considerando derechos y deberes cívicos.',tip:'Rights vs. duties framing. Use: deber cívico, autonomía individual, cohesión social, disuasión militar, objetor de conciencia.'},
+    {q:'¿En qué medida son responsables las redes sociales de la polarización política en las democracias modernas?',tip:'Causal argument with multiple actors. Assign degrees of responsibility: algorithms, users, regulation gaps. Use: cámara de eco, desinformación, algoritmo de radicalización, fragmentación del discurso.'},
+    {q:'¿Tiene la sociedad la obligación de integrar y apoyar a las personas sin hogar, o es principalmente una responsabilidad individual?',tip:'Social contract question. Argue from both rights-based and utilitarian perspectives. Use: dignidad humana, costo social, intervención pública, voluntad política.'},
+    {q:'¿Cómo debería el sistema de salud pública abordar la crisis de salud mental post-pandémica?',tip:'Policy + public health + ethics. Use: estigma social, acceso universal, presupuesto sanitario, prevención vs. tratamiento, crisis sistémica.'},
+    {q:'¿Es justa la pena de muerte desde una perspectiva ética y jurídica? Defienda su postura con argumentos estructurados.',tip:'High-stakes moral argument. Superior speakers take a clear position. Use: derecho a la vida, error judicial, disuasión, proporcionalidad, abolicionismo.'},
+    {q:'¿Qué obligaciones tiene una generación presente hacia las generaciones futuras en cuanto al medio ambiente y los recursos naturales?',tip:'Intergenerational ethics. Hypothesize: "Si no tomáramos medidas hoy, las consecuencias para las generaciones futuras serían..." Use: sostenibilidad, responsabilidad intergeneracional, justicia ambiental.'},
+    {q:'¿Cómo deben las sociedades democráticas manejar el discurso de odio: regulándolo o defendiendo la libertad de expresión absoluta?',tip:'Freedom vs. harm debate. Structure both sides rigorously before concluding. Use: libertad de expresión, discurso de odio, daño social, regulación democrática, límites constitucionales.'},
+  ],
+  'Legal & Court':[
+    {q:'Explique la diferencia entre testimonio directo e interrogatorio cruzado, y por qué ambos son esenciales para la justicia.',tip:'Legal register required: declarante, abogado defensor, fiscal, objeción, admisible. Show mastery of courtroom vocabulary and procedural logic.'},
+    {q:'¿Cuáles son las responsabilidades éticas de un intérprete judicial cuando el testigo usa jerga o lenguaje coloquial?',tip:'Discuss: fidelidad, imparcialidad, exactitud, código deontológico, registro. Show professional self-awareness and Superior discourse.'},
+    {q:'Un acusado no entiende sus derechos Miranda en su idioma. ¿Cómo debería manejarse esta situación? Argumente.',tip:'Vocabulary: derechos constitucionales, debido proceso, garantías procesales, asistencia del intérprete. Argue from legal AND ethical grounds.'},
+    {q:'Compare los sistemas de justicia penal de España y América Latina. ¿Cuáles son las diferencias más significativas para un intérprete?',tip:'Cross-system comparison at an abstract level = Superior. Show knowledge of: sistema inquisitivo vs. acusatorio, derecho civil vs. común.'},
+    {q:'¿Qué desafíos lingüísticos presenta la interpretación simultánea en comparación con la consecutiva en un juicio oral?',tip:'Professional expertise + abstract comparison. Vocabulary: carga cognitiva, latencia, fidelidad semántica, memoria a corto plazo, segmentación.'},
+    {q:'¿En qué circunstancias puede un intérprete judicial solicitar la suspensión de una audiencia? Justifique su respuesta.',tip:'Professional protocol + ethical reasoning. Use: deber de exactitud, interferencia procesal, límite de competencia, obligación de transparencia.'},
+    {q:'¿Cómo afecta la falta de intérpretes certificados al acceso a la justicia de las comunidades hispanohablantes en Utah?',tip:'Systemic analysis. Use: barrera lingüística, acceso igualitario, debido proceso, escasez de intérpretes, consecuencias procesales.'},
+    {q:'Explique qué es la cadena de custodia de la evidencia y por qué su integridad es fundamental en un proceso penal.',tip:'Legal vocabulary: evidencia física, cadena de custodia, admisibilidad, impugnación, contaminación de pruebas. Argue procedural necessity.'},
+    {q:'¿Cuál es la diferencia entre un delito menor y un delito grave en el sistema legal estadounidense, y cómo afecta eso al proceso judicial?',tip:'Misdemeanor vs. felony distinction. Use: pena máxima, tribunal de primera instancia, juicio con jurado, registro criminal, consecuencias colaterales.'},
+    {q:'¿Qué papel cumple el ministerio público en un proceso penal y en qué se diferencia del rol del juez?',tip:'Role differentiation = Superior function. Vocabulary: acusación formal, imparcialidad judicial, carga de la prueba, principio acusatorio, separación de funciones.'},
+    {q:'¿Cómo debería el sistema legal abordar los casos en que el acusado padece una enfermedad mental grave?',tip:'Law + ethics intersection. Use: inimputabilidad, responsabilidad penal reducida, hospitalización involuntaria, defensa por enajenación mental, rehabilitación vs. castigo.'},
+    {q:'¿Qué implicaciones éticas y legales tiene el uso de traductores automáticos en procedimientos judiciales?',tip:'Technology + professional ethics. Use: exactitud semántica, responsabilidad jurídica, error de traducción, estándares profesionales, riesgo procesal.'},
+    {q:'Describa el proceso de voir dire y explique por qué la selección del jurado es crítica para garantizar un juicio justo.',tip:'Jury selection vocabulary: voir dire, descalificación perentoria, jurado imparcial, sesgo implícito, representatividad. Argue fairness implications.'},
+    {q:'¿En qué situaciones tiene el acusado derecho a un intérprete y quién tiene la responsabilidad de proveerlo?',tip:'Constitutional right + procedural responsibility. Use: Título VI, enmienda constitucional, obligación del tribunal, derecho a intérprete, financiamiento público.'},
+    {q:'¿Cómo debe un asistente legal manejar una situación en que el cliente comparte información que podría incriminarle a él mismo?',tip:'Privilegio abogado-cliente, confidencialidad, deber de advertencia, límites éticos del paralegal. Argue professional boundaries clearly.'},
+    {q:'¿Qué es el habeas corpus y por qué se considera una garantía fundamental del estado de derecho?',tip:'Historical + constitutional argument. Use: detención arbitraria, estado de derecho, protección judicial, suspensión de garantías, precedente histórico.'},
+    {q:'¿Cómo influye el origen socioeconómico de un acusado en su acceso a una defensa legal efectiva?',tip:'Structural justice analysis. Use: defensa pública vs. privada, desigualdad ante la ley, recursos procesales, representación adecuada, equidad procesal.'},
+    {q:'Explique la diferencia entre libertad bajo fianza y libertad condicional, y cómo se determina cada una.',tip:'Procedural distinctions. Vocabulary: audiencia de fianza, riesgo de fuga, condiciones de supervisión, violación de libertad condicional, revocación.'},
+    {q:'¿Qué desafíos éticos enfrenta un paralegal bilingüe cuando actúa como intermediario cultural además de lingüístico?',tip:'Role ambiguity = Superior ethical territory. Argue: límites del rol, riesgo de sobrepasarse, competencia cultural vs. asesoría legal, código de conducta profesional.'},
+    {q:'¿En qué medida protege el sistema de justicia restaurativa los derechos de las víctimas en comparación con el sistema punitivo tradicional?',tip:'Comparative justice systems. Use: justicia restaurativa, reparación del daño, reincidencia, necesidades de la víctima, responsabilización del infractor.'},
+  ],
+  'Ethics & Society':[
+    {q:'¿Tiene la prensa la obligación de publicar información que puede dañar la seguridad nacional si es de interés público?',tip:'Weigh competing values: libertad de prensa vs. seguridad nacional. Argue both, conclude with reasoned position. Avoid "it depends" without development.'},
+    {q:'¿Es la desobediencia civil alguna vez moralmente justificable? Proporcione ejemplos históricos para sustentar su argumento.',tip:'Historical grounding + moral argument = Superior. Vocabulary: justificación moral, injusticia sistémica, proporcionalidad, precedente histórico.'},
+    {q:'¿Cómo debe equilibrar una sociedad la libertad individual con el bien colectivo durante una crisis sanitaria?',tip:'Abstract societal balancing act. Use: autonomía individual, medidas coercitivas, proporcionalidad, solidaridad social, legitimidad del Estado.'},
+    {q:'¿Tienen las empresas tecnológicas responsabilidad moral por el uso que hacen sus usuarios de sus plataformas?',tip:'Corporate ethics + digital responsibility. Use: responsabilidad moral compartida, deber de cuidado, moderación de contenido, neutralidad de plataforma.'},
+    {q:'¿Es éticamente justificable mentir para proteger a alguien? Explore los límites morales de la honestidad.',tip:'Philosophical ethics at the Superior level. Reference: ética kantiana, consecuencialismo, mentira piadosa, integridad moral, contexto vs. principio absoluto.'},
+    {q:'¿Qué obligaciones éticas tienen los profesionales de la salud cuando sus valores personales entran en conflicto con las necesidades del paciente?',tip:'Professional ethics + autonomy. Use: objeción de conciencia, autonomía del paciente, deber de atención, ética médica, derivación profesional.'},
+    {q:'¿Cómo debería la sociedad responder éticamente al uso de animales en experimentos científicos?',tip:'Animal ethics debate. Use: bienestar animal, necesidad científica, alternativas éticas, especismo, regulación del sufrimiento. Build structured argument.'},
+    {q:'¿Es ético el turismo en comunidades en desarrollo si genera impacto cultural y económico negativo?',tip:'Tourism ethics + cultural exploitation. Use: extractivismo turístico, soberanía cultural, beneficio económico local, dependencia, turismo responsable.'},
+    {q:'¿Tienen los ciudadanos una obligación ética de participar en la vida política de su comunidad? ¿Por qué o por qué no?',tip:'Civic ethics. Structure: what we owe to society vs. individual freedom. Use: deber cívico, apatía democrática, participación activa, legitimidad institucional.'},
+    {q:'¿Qué responsabilidad ética tienen los países ricos frente a la crisis migratoria global causada por el cambio climático?',tip:'Global ethics + climate justice. Use: refugiados climáticos, responsabilidad histórica, obligación humanitaria, capacidad de acogida, justicia global.'},
+    {q:'¿Es ético el uso de inteligencia artificial en decisiones judiciales, como la determinación de sentencias o la libertad condicional?',tip:'AI ethics + justice. Use: sesgo algorítmico, transparencia, rendición de cuentas, derecho a explicación, justicia humana vs. automatizada.'},
+    {q:'¿Tiene la generación actual una deuda moral con generaciones pasadas que sufrieron injusticias sistémicas? ¿Cómo debería saldarse?',tip:'Intergenerational ethics + reparations debate. Use: deuda histórica, responsabilidad colectiva, reparación simbólica vs. material, justicia transicional.'},
+    {q:'¿Es el consumo responsable una solución real al problema del cambio climático o una distracción de las responsabilidades corporativas?',tip:'Individual vs. systemic responsibility. Argue: acción individual tiene límites → responsabilidad corporativa + estatal es estructural. Use: greenwashing, externalidades ambientales.'},
+    {q:'¿Qué dilemas éticos plantea la vigilancia masiva del Estado en nombre de la seguridad nacional?',tip:'Privacy vs. security. Use: estado de vigilancia, privacidad como derecho, proporcionalidad, abuso institucional, consentimiento ciudadano.'},
+    {q:'¿Deben los médicos estar obligados a revelar diagnósticos terminales a sus pacientes en todos los casos?',tip:'Medical ethics + patient autonomy. Use: derecho a saber, autonomía informada, protección paternalista, verdad terapéutica, decisión clínica.'},
+    {q:'¿Es ético que las empresas farmacéuticas patenten medicamentos que salvan vidas y los pongan fuera del alcance de los países pobres?',tip:'Global health ethics. Use: monopolio farmacéutico, acceso a medicamentos, innovación vs. equidad, licencias obligatorias, acuerdo TRIPS.'},
+    {q:'¿Cómo debería una sociedad abordar éticamente la eutanasia y el derecho a morir con dignidad?',tip:'Bioethics + autonomy + societal values. Use: muerte digna, autonomía del paciente, objeción de conciencia, pendiente resbaladiza, legislación comparada.'},
+    {q:'¿Tiene el periodismo una responsabilidad ética especial en tiempos de posverdad y desinformación masiva?',tip:'Media ethics. Use: veracidad informativa, responsabilidad cívica del periodista, fake news, curación de contenido, pérdida de confianza institucional.'},
+    {q:'¿Es éticamente aceptable que los gobiernos usen datos personales de ciudadanos para predecir y prevenir crímenes antes de que ocurran?',tip:'Predictive policing ethics. Use: presunción de inocencia, vigilancia predictiva, discriminación algorítmica, derecho a la privacidad, Estado de derecho.'},
+    {q:'¿Qué obligaciones éticas tienen los abogados y paralegales frente a clientes que claramente son culpables?',tip:'Legal ethics core question. Use: derecho a defensa, rol del defensor, presunción de inocencia, límites de la representación, ética profesional.'},
+  ],
+  'Economics':[
+    {q:'¿En qué medida es responsable el sector financiero de las desigualdades económicas globales?',tip:'Abstract causal analysis. Avoid concrete-only answers. Use: responsabilidad sistémica, mecanismos de mercado, inequidad estructural, redistribución.'},
+    {q:'¿Cómo afecta la automatización al futuro del trabajo y qué políticas debería implementar el Estado para mitigar sus efectos?',tip:'Hypothesize about consequences AND propose structured policy solutions. Combines argument + hypothesis — the Superior double.'},
+    {q:'¿Debe el Estado regular el precio de medicamentos esenciales aunque eso desincentive la innovación farmacéutica?',tip:'Trade-off argument structure. Argue: sí, porque X → pero reconocemos Y → por lo tanto, Z es una solución intermedia viable.'},
+    {q:'¿Es la globalización un fenómeno que reduce o profundiza la pobreza en los países en desarrollo? Argumente con evidencia.',tip:'Complex causal argument. Take a nuanced position — neither fully pro nor anti-globalization. Use: cadenas de valor global, explotación laboral, transferencia tecnológica, dependencia económica.'},
+    {q:'¿Debería el salario mínimo ser fijado a nivel federal o dejarse a la discreción de cada estado? Analice las implicaciones económicas.',tip:'Federalism + labor economics. Use: costo de vida regional, competitividad empresarial, umbral de pobreza, empleo informal, poder adquisitivo.'},
+    {q:'¿Qué consecuencias tendría para la economía global una transición rápida hacia energías renovables?',tip:'Economic transition hypothetical. Use: costos de transición, industrias extractivas, empleo verde, seguridad energética, subsidios fósiles. Hypothesize short AND long-term.'},
+    {q:'¿Es el libre comercio siempre beneficioso, o existen circunstancias en que el proteccionismo es justificable?',tip:'Trade policy debate. Superior speakers argue conditions: "El libre comercio beneficia cuando... pero el proteccionismo puede justificarse cuando..." Use: aranceles, dumping, industria naciente, déficit comercial.'},
+    {q:'¿Cómo afecta la deuda pública excesiva a la capacidad de un gobierno para financiar servicios sociales?',tip:'Fiscal policy analysis. Use: sostenibilidad fiscal, prima de riesgo, gasto social, austeridad, ciclo económico. Argue structural consequences.'},
+    {q:'¿Puede el capitalismo de mercado abordar eficazmente el cambio climático, o se requiere intervención estatal significativa?',tip:'Market vs. state in environmental economics. Use: externalidades negativas, fallo de mercado, incentivos de precio, regulación ambiental, impuesto al carbono.'},
+    {q:'¿Qué papel debería tener la economía informal en los países latinoamericanos y cómo debería el Estado relacionarse con ella?',tip:'Informal economy + development policy. Use: informalidad laboral, evasión fiscal, integración progresiva, protección social, microempresas.'},
+    {q:'¿Es la desigualdad salarial entre hombres y mujeres un problema de mercado o de discriminación estructural?',tip:'Gender pay gap debate. Use: brecha salarial, segregación ocupacional, discriminación implícita, valor del trabajo de cuidado, políticas de equidad.'},
+    {q:'¿Cómo afecta la corrupción gubernamental al desarrollo económico de un país? Cite mecanismos específicos.',tip:'Corruption + development causality. Use: instituciones débiles, desvío de recursos, inversión extranjera, capital humano, erosión del estado de derecho.'},
+    {q:'¿Debería el sistema tributario ser más progresivo de lo que es actualmente en los países desarrollados? Argumente.',tip:'Tax policy debate. Use: progresividad fiscal, redistribución, incentivos a la inversión, paraísos fiscales, concentración de riqueza, contrato social.'},
+    {q:'¿Qué riesgos y beneficios presenta la adopción de criptomonedas como alternativa a las monedas nacionales?',tip:'Monetary economics + emerging tech. Use: descentralización, volatilidad, lavado de dinero, inclusión financiera, soberanía monetaria, regulación.'},
+    {q:'¿Cómo impacta la migración laboral en las economías de los países de origen y de destino?',tip:'Migration economics, both sides. Use: remesas, fuga de cerebros, presión salarial, integración laboral, contribución fiscal de migrantes.'},
+    {q:'¿Es el turismo una estrategia sostenible de desarrollo económico para países en vías de desarrollo?',tip:'Development economics + sustainability. Use: dependencia turística, monocultura económica, ingreso per cápita, estacionalidad, soberanía económica.'},
+    {q:'¿Qué lecciones económicas dejó la pandemia de COVID-19 sobre la fragilidad de las cadenas de suministro globales?',tip:'Post-pandemic economic analysis. Use: resiliencia económica, relocalización industrial, dependencia estratégica, gestión de riesgos, nearshoring.'},
+    {q:'¿Hasta qué punto es responsabilidad del Estado garantizar la estabilidad financiera de sus ciudadanos durante crisis económicas?',tip:'Social safety net debate. Use: Estado de bienestar, transferencias condicionadas, estabilizadores automáticos, riesgo moral, capacidad fiscal.'},
+    {q:'¿Cómo debería el sistema económico global abordar la brecha tecnológica entre países ricos y pobres?',tip:'Technology + development + global equity. Use: brecha digital, transferencia tecnológica, propiedad intelectual, dependencia tecnológica, cooperación internacional.'},
+    {q:'¿Es la privatización de servicios públicos como el agua, la salud o la educación económicamente eficiente o éticamente problemática?',tip:'Public vs. private provision. Structure: efficiency argument → equity counterargument → synthesize. Use: fallo de mercado, bien público, rentabilidad social, equidad de acceso.'},
+  ],
+  'Culture & Language':[
+    {q:'¿Puede un idioma desaparecer completamente en una sociedad bilingüe? ¿Qué factores lo determinan?',tip:'Speculation + abstract causes. Vocabulary: vitalidad lingüística, diglosia, desplazamiento idiomático, políticas lingüísticas, identidad cultural.'},
+    {q:'¿De qué manera el colonialismo histórico continúa influyendo en las relaciones entre Latinoamérica y España hoy?',tip:'Historical causation + present consequences = Superior content. Use: legado colonial, asimetría de poder, identidad poscolonial, relaciones asimétricas.'},
+    {q:'¿Es el bilingüismo una ventaja cognitiva o simplemente una herramienta comunicativa? Argumente basándose en evidencia.',tip:'Academic register. Reference: ventaja cognitiva, función ejecutiva, cambio de código, competencia nativa, hipótesis del umbral.'},
+    {q:'¿Tiene una sociedad la obligación de preservar las lenguas indígenas aunque sus hablantes sean muy pocos? Argumente.',tip:'Language rights + cultural ethics. Use: patrimonio lingüístico, revitalización idiomática, derecho cultural, costo de preservación, identidad colectiva.'},
+    {q:'¿Cómo influye el idioma en la manera en que percibimos y conceptualizamos el mundo que nos rodea?',tip:'Linguistic relativity (Sapir-Whorf). Use: hipótesis de relatividad lingüística, categorización conceptual, léxico cultural, cosmovisión, marco cognitivo.'},
+    {q:'¿Es la globalización cultural una amenaza para la diversidad cultural o una oportunidad de enriquecimiento mutuo?',tip:'Argue both sides of cultural globalization. Use: homogeneización cultural, imperialismo cultural, hibridación, identidad local, soft power.'},
+    {q:'¿Qué desafíos plantea la traducción de conceptos jurídicos entre el español y el inglés para la práctica legal y la justicia?',tip:'Legal translation challenges. Use: equivalencia funcional, falsos cognados jurídicos, intraducibilidad, sistema jurídico de origen, consecuencias procesales de errores.'},
+    {q:'¿Cómo construye la identidad cultural una comunidad inmigrante que vive entre dos culturas?',tip:'Bicultural identity. Use: identidad híbrida, aculturación, mantenimiento cultural, segunda generación, tensión de pertenencia.'},
+    {q:'¿Es el español hablado en Estados Unidos una variedad legítima del idioma o una forma degradada del mismo?',tip:'Language ideology + sociolinguistics. Use: español estadounidense, Spanglish, variedad dialectal, legitimidad lingüística, estigma sociolingüístico, norma prescriptiva vs. descriptiva.'},
+    {q:'¿Puede la traducción literaria capturar realmente la esencia cultural de una obra, o siempre se pierde algo esencial?',tip:'Philosophy of translation. Use: equivalencia dinámica, intraducibilidad, domesticación vs. extranjerización, pérdida semántica, fidelidad autoral.'},
+    {q:'¿Cómo afecta el dominio del inglés como lengua franca global a las oportunidades profesionales de los hablantes de otras lenguas?',tip:'Linguistic capital + power. Use: capital lingüístico, hegemonía del inglés, desventaja estructural, plurilingüismo, inclusión profesional.'},
+    {q:'¿Qué papel juegan los medios de comunicación en la estandarización o fragmentación de las variedades del español?',tip:'Media + language standardization. Use: norma mediática, variedad de prestigio, dialectos regionales, influencia televisiva, identidad lingüística.'},
+    {q:'¿Debería la educación intercultural ser obligatoria en las escuelas de sociedades multiétnicas? Justifique su respuesta.',tip:'Education policy + multiculturalism. Use: competencia intercultural, cohesión social, prejuicio étnico, currículo inclusivo, ciudadanía global.'},
+    {q:'¿Cómo afecta la pérdida de un idioma a la identidad colectiva de un pueblo?',tip:'Language-identity nexus. Use: memoria cultural, cosmovisión colectiva, narrativa comunitaria, duelo cultural, resistencia identitaria.'},
+    {q:'¿En qué medida refleja el lenguaje jurídico las relaciones de poder dentro de una sociedad?',tip:'Critical linguistics + law. Use: discurso jurídico, poder simbólico, lenguaje excluyente, acceso al derecho, simplificación del lenguaje legal.'},
+    {q:'¿Qué responsabilidades tienen los intérpretes y traductores en la preservación de la intención comunicativa original del hablante?',tip:'Translation ethics + fidelity. Use: equivalencia pragmática, intención comunicativa, fidelidad al registro, adaptación cultural, deber de exactitud.'},
+    {q:'¿Cómo influye el estatus socioeconómico en el acceso a la educación bilingüe de calidad?',tip:'Language + class inequality. Use: segregación educativa, capital lingüístico, escuelas bilingües de élite, desigualdad de acceso, política lingüística inclusiva.'},
+    {q:'¿Es el español neutro de los medios de comunicación una construcción artificial que ignora la riqueza dialectal del idioma?',tip:'Dialectology + media linguistics. Use: español neutro, desdialectalización, variedad suprarregional, diversidad lingüística, mercado mediático hispano.'},
+    {q:'¿Cómo pueden los intérpretes judiciales manejar diferencias culturales profundas que afectan la comprensión del testimonio de un testigo?',tip:'Cultural mediation vs. strict interpretation. Use: competencia cultural, interferencia cultural, rol del intérprete, neutralidad, aclaración al tribunal.'},
+    {q:'¿Qué impacto tiene la enseñanza del español como herencia en comunidades latinas en Estados Unidos sobre la identidad y la movilidad social?',tip:'Heritage language + identity + mobility. Use: español de herencia, mantenimiento lingüístico, identidad bicultural, estigma lingüístico, ventaja profesional.'},
+  ],
+};
+const cats=Object.keys(qData);
+let curCat=cats[0],curQIdx=0;
+const qCatTabs=document.getElementById('qCatTabs');
+let qTabsRendered=false;
+function renderQTabs(){
+  if(qTabsRendered)return;
+  qTabsRendered=true;
+  cats.forEach(c=>{
+    const btn=document.createElement('button');
+    btn.className='cat-tab'+(c===curCat?' active':'');
+    btn.textContent=c;
+    btn.onclick=()=>{curCat=c;curQIdx=0;document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderQ();};
+    qCatTabs.appendChild(btn);
+  });
+}
+function renderQ(){
+  const qs=qData[curCat];
+  const q=qs[curQIdx%qs.length];
+  document.getElementById('qCatLabel').textContent=curCat+' · Question '+(curQIdx%qs.length+1)+' of '+qs.length;
+  document.getElementById('qText').textContent=q.q;
+  document.getElementById('qTip').innerHTML='<strong>Coaching:</strong> '+q.tip;
+  document.getElementById('qCounter').textContent=(curQIdx%qs.length+1)+' / '+qs.length;
+  document.getElementById('qProgress').style.width=Math.round(((curQIdx%qs.length+1)/qs.length)*100)+'%';
+}
+function nextQuestion(){curQIdx++;renderQ();}
+function prevQuestion(){curQIdx=Math.max(0,curQIdx-1);renderQ();}
+
+// ═══════════════════════════════════════════
+// FLASHCARDS
+// ═══════════════════════════════════════════
+const flashcards=[
+  {f:'¿Cómo se construye un argumento estructurado de nivel Superior?',b:'Tesis → Evidencia 1 (con ejemplo concreto) → Evidencia 2 (con contraste) → Concesión ("si bien es cierto que...") → Conclusión reforzada. Never just describe — always argue a defensible position.'},
+  {f:'Subjuntivo en hipótesis: "Si pudiera cambiar una ley..."',b:'Use imperfect subjunctive: "Si pudiera, implementaría..." / "Si fuera posible, propondría..." Non-negotiable Superior marker. Weak or absent subjunctive = Advanced High ceiling. Practice until automatic.'},
+  {f:'Vocabulario legal esencial: derechos del acusado',b:'Miranda: derecho a guardar silencio · derecho a un abogado · declaración incriminatoria. Court: el imputado / acusado · el fiscal / ministerio público · el defensor de oficio · la sala · el jurado · el veredicto · la sentencia.'},
+  {f:'Conectores discursivos imprescindibles para Superior',b:'Contraste: sin embargo · no obstante · a pesar de ello · en contraposición a. Consecuencia: en consecuencia · por consiguiente · cabe señalar que. Concesión: si bien es cierto que · aunque reconozco que · a pesar de lo cual · si bien...'},
+  {f:'¿Qué diferencia el texto tipo Superior del texto tipo Avanzado?',b:'Advanced = paragraphs about concrete events and personal narration. Superior = extended, organized, thesis-driven discourse on abstract ideas, with logical connectors and awareness of register. No unnaturally long pauses during abstract elaboration.'},
+  {f:'Cambio de registro: formal vs. informal vs. legal',b:'Legal/formal: "el señor juez" · "su señoría" · "sírvase indicar" · "de conformidad con lo dispuesto en". Formal: "le agradezco" · "cabe mencionar". Court interpreters reproduce the speaker\'s exact register — this is an ethical obligation, not a stylistic choice.'},
+  {f:'Vocabulario: política social y derechos humanos',b:'desigualdad sistémica · inequidad estructural · garantías constitucionales · estado de derecho · justicia redistributiva · vulnerabilidad social · políticas de inclusión · acceso igualitario · discriminación estructural · derechos fundamentales'},
+  {f:'Manejo de temas desconocidos (unfamiliar topics)',b:'Superior speakers don\'t freeze. Strategy: acknowledge briefly, then pivot to a related principle. "Aunque no tengo experiencia directa con ese tema, desde una perspectiva general podría argumentarse que..." Never avoid the task.'},
+  {f:'¿Qué es "hipótesis" en el OPI y cómo se produce?',b:'Hypothesizing = exploring consequences of imagined scenarios. Triggers: ¿Qué pasaría si...? / ¿Cómo sería...? Pattern: "Si X ocurriera, entonces Y sería probable, dado que Z, aunque también habría que considerar W."'},
+  {f:'Vocabulario: ética profesional del intérprete judicial',b:'imparcialidad · fidelidad · exactitud · confidencialidad · conflicto de intereses · código deontológico · abstención · neutralidad lingüística · el intérprete no asesora ni aconseja · suplantación de funciones · deber de exactitud'},
+  {f:'Coherencia vs. cohesión — ¿cuál es la diferencia?',b:'Cohesion = surface connectors (sin embargo, además). Coherence = logical progression of ideas — each sentence builds on the last toward the thesis. Superior speakers demonstrate both. Advanced speakers often have cohesion but lose coherence in extended turns.'},
+  {f:'Circunlocución: cómo manejar vocabulario desconocido',b:'Never stop at an unknown word. Paraphrase fluently: "lo que en inglés se conoce como..." / "lo que podríamos describir como..." / "en términos jurídicos equivale a..." / "el concepto que hace referencia a...". Circumlocution is a Superior-level skill, not a failure.'},
+  {f:'El modo condicional perfecto: ¿cuándo y cómo usarlo?',b:'"Habría implementado esa política si..." / "Hubiera propuesto alternativas, pero..." Used for hypotheses in the past — speculation about what could have been. Demonstrates full control of the Spanish verbal system at Superior level.'},
+  {f:'¿Cómo demostrar "precisión pragmática" en el OPI?',b:'Matching your language to the social context: formal with the tester, adjusting for topics, knowing when to hedge ("es posible que..."), when to assert ("claramente..."), and when to concede ("si bien reconozco que..."). It\'s not just accuracy — it\'s social appropriateness.'},
+];
+let fcIdx=0,fcFlipped=false;
+function showCard(){
+  document.getElementById('fcFront').textContent=flashcards[fcIdx].f;
+  document.getElementById('fcBack').textContent=flashcards[fcIdx].b;
+  document.getElementById('fcInner').classList.remove('flipped');
+  fcFlipped=false;
+  document.getElementById('fcCounter').textContent='Card '+(fcIdx+1)+' of '+flashcards.length;
+  document.getElementById('fcProgress').style.width=Math.round(((fcIdx+1)/flashcards.length)*100)+'%';
+}
+function flipCard(){fcFlipped=!fcFlipped;document.getElementById('fcInner').classList.toggle('flipped',fcFlipped);}
+function fcNav(dir){fcIdx=(fcIdx+dir+flashcards.length)%flashcards.length;showCard();}
+showCard();
+
+// ═══════════════════════════════════════════
+// MOCK OPI EXAMS
+// ═══════════════════════════════════════════
+const exams=[
+  {
+    title:'Mock Exam 1 — Social Policy & Current Affairs',
+    theme:'Topics: immigration, social inequality, public health policy',
+    duration:'25–30 minutes simulated',
+    stages:[
+      {num:1,name:'Warm-Up',time:'~3 min',exchanges:[
+        {role:'T',text:'Hola, buenos días. Soy su examinadora de hoy. Esta entrevista será en español. Primero me gustaría conocerla un poco. Cuénteme, ¿dónde vive usted actualmente y a qué se dedica?',note:'Tester establishes comfort level. Answer naturally and expansively.'},
+        {role:'C',text:'Buenos días. Trabajo como asistente legal en un bufete de abogados aquí en Utah, con especialización en derecho de inmigración y derecho penal. Gran parte de mi trabajo implica comunicarme directamente con clientes hispanohablantes y asistir a los abogados en la preparación de casos.',note:'Strong warm-up: professional, confident, uses complete sentences.'},
+        {role:'T',text:'¡Qué interesante! ¿Qué es lo que más disfruta de su trabajo?',note:''},
+        {role:'C',text:'Lo que más valoro es el impacto directo que tiene mi trabajo en la vida de las personas. Muchos de nuestros clientes llegan sin entender el sistema legal y sin saber qué derechos tienen. Poder explicarles el proceso, en su propio idioma y con claridad, marca una diferencia real. También disfruto la complejidad del derecho — cada caso es distinto y requiere análisis cuidadoso.',note:'Extended, personal, fluent — good warm-up register.'},
+      ]},
+      {num:2,name:'Level Check — Advanced',time:'~7 min',exchanges:[
+        {role:'T',text:'Me ha mencionado que trabaja con clientes hispanohablantes en el ámbito legal. Cuénteme, ¿cómo ha cambiado la tecnología la manera en que los bufetes de abogados atienden a clientes de habla hispana en los últimos años?',note:'Advanced-level: narrate change over time.'},
+        {role:'C',text:'En mi trabajo diario como asistente legal veo directamente cómo la tecnología ha cambiado el acceso a la información jurídica. Antes, los clientes llegaban completamente desorientados; hoy, muchos ya han investigado en línea, han visto videos en YouTube sobre sus derechos, o han usado traductores automáticos para leer documentos. Eso ha cambiado la dinámica: los abogados ahora tienen que lidiar tanto con clientes mejor informados como con malentendidos generados por información incorrecta o mal traducida.',note:'Good Advanced response: narrates change across time frames, uses connectors.'},
+        {role:'T',text:'¿Y cuáles son los mayores desafíos que enfrentan sus clientes hispanohablantes al navegar el sistema legal estadounidense?',note:''},
+        {role:'C',text:'Los retos son múltiples. El primero es la barrera del idioma, por supuesto, pero más allá de eso está la desconfianza institucional — muchos clientes han tenido experiencias negativas con autoridades en sus países de origen y traen ese miedo al sistema aquí. El segundo reto es la complejidad burocrática: formularios, plazos, terminología legal que ni siquiera es clara para hablantes nativos de inglés. Y el tercero es económico: muchos no pueden pagar representación legal completa y dependen de servicios de asistencia limitada.',note:''},
+      ]},
+      {num:3,name:'Superior Probe — Argument',time:'~10 min',exchanges:[
+        {role:'T',text:'Usted mencionó los desafíos de inmigración en su comunidad. Desde su perspectiva, ¿en qué medida es responsable el Estado de integrar lingüística y culturalmente a los inmigrantes, y en qué medida es responsabilidad del individuo?',note:'SUPERIOR PROBE: Argues abstract social responsibility. Must show structured argument.'},
+        {role:'C',text:'Esta es una pregunta que toca valores fundamentales en tensión: la solidaridad colectiva versus la autonomía individual. En mi opinión, la responsabilidad es compartida, pero no equitativa. El Estado tiene la obligación de crear condiciones estructurales — acceso a educación lingüística, servicios en el idioma de origen, protección legal — porque sin ese andamiaje, la integración se convierte en una carga individual imposible de asumir. Sin embargo, el inmigrante también tiene un compromiso activo: participar en los procesos de aprendizaje, involucrarse en la comunidad. La integración exitosa no ocurre por decreto, sino a través de un contrato social bidireccional. Ignorar la responsabilidad estatal es culpar a la víctima de condiciones que ella no creó.',note:'SUPERIOR: Thesis stated → both sides argued → rebuttal → principled conclusion → extended discourse.'},
+        {role:'T',text:'¿Qué pasaría si el Estado decidiera eliminar por completo los programas de educación bilingüe en las escuelas públicas?',note:'SUPERIOR PROBE: Hypothesize consequences.'},
+        {role:'C',text:'Si se eliminaran los programas de educación bilingüe, las consecuencias serían profundas y multidimensionales. A corto plazo, los estudiantes de herencia lingüística perderían el único espacio formal donde su idioma es valorado académicamente. A largo plazo, veríamos un empobrecimiento cognitivo comprobado — la investigación neurocientífica es clara sobre los beneficios del bilingüismo en la función ejecutiva. Además, desde una perspectiva de derechos, estaríamos hablando de una forma de asimilación forzada que históricamente ha generado trauma cultural. No sería únicamente una política educativa; sería una declaración sobre qué idiomas y qué comunidades considera valiosas el Estado.',note:'SUPERIOR: Hypothesizes across time frames, abstract consequences, uses evidence, connects to broader principle.'},
+      ]},
+      {num:4,name:'Wind-Down',time:'~3 min',exchanges:[
+        {role:'T',text:'Ha sido una conversación muy enriquecedora. Por último, ¿qué planes tiene para el próximo semestre?',note:'Wind-down returns to comfort zone. Answer warmly and naturally.'},
+        {role:'C',text:'El próximo semestre tengo previsto terminar un artículo sobre autoevaluación en la competencia oral, y también iniciar un nuevo proyecto de investigación sobre el uso del OPI en contextos de certificación profesional. Y, por supuesto, seguir preparando a mis estudiantes para sus propias evaluaciones de competencia lingüística.',note:''},
+      ]},
+    ],
+    rubric:{F:'Argues social responsibility, hypothesizes consequences across time frames',A:'Complex grammar sustained; subjunctive and conditional used accurately',C:'Abstract social policy topics handled with depth and nuance',T:'Extended thesis-driven discourse; organized, logical, no breakdown'},
+  },
+  {
+    title:'Mock Exam 2 — Legal Ethics & Court Interpreting',
+    theme:'Topics: interpreter ethics, legal rights, due process',
+    duration:'25–30 minutes simulated',
+    stages:[
+      {num:1,name:'Warm-Up',time:'~3 min',exchanges:[
+        {role:'T',text:'Buenos días. ¿Podría contarme un poco sobre su trayectoria profesional y qué la llevó al campo de la interpretación judicial?',note:''},
+        {role:'C',text:'Con mucho gusto. Trabajo como asistente legal bilingüe en Utah, principalmente en casos de derecho penal e inmigración. Mi rol incluye preparar documentación, coordinar con clientes hispanohablantes, y asistir a los abogados durante audiencias. Fue precisamente ese trabajo lo que me motivó a buscar la certificación como intérprete judicial.',note:''},
+      ]},
+      {num:2,name:'Level Check — Advanced',time:'~7 min',exchanges:[
+        {role:'T',text:'Descríbame cómo funciona un juicio oral típico en el sistema judicial de Utah, desde la perspectiva del intérprete.',note:'Advanced: describe a process in detail.'},
+        {role:'C',text:'Como asistente legal he acompañado a abogados en múltiples tipos de audiencias en Utah. En un juicio oral, el intérprete trabaja en estrecha coordinación con el abogado defensor. Durante el testimonio, alterna entre interpretación consecutiva — para las declaraciones del testigo — y simultánea en voz baja, para mantener informado al acusado de lo que ocurre. Todo debe interpretarse: los alegatos, las objeciones, las instrucciones del juez. Nada se puede omitir ni resumir. La exactitud es una obligación legal y ética.',note:''},
+      ]},
+      {num:3,name:'Superior Probe — Argument',time:'~10 min',exchanges:[
+        {role:'T',text:'Un intérprete judicial se da cuenta de que el testigo está mintiendo. ¿Tiene alguna obligación ética de intervenir o revelar esa información? Argumente su postura.',note:'SUPERIOR PROBE: Ethical dilemma requiring structured argument.'},
+        {role:'C',text:'Esta es precisamente la tensión central del rol del intérprete: existe para facilitar la comunicación, no para administrar justicia. La respuesta ética es clara, aunque emocionalmente difícil: el intérprete no debe intervenir ni revelar nada. Su función es reproducir con exactitud lo que el testigo dice, incluyendo lo que es falso. El sistema judicial tiene sus propios mecanismos para detectar el perjurio: el interrogatorio cruzado, la evidencia física, los testimonios contradictorios. Si el intérprete comenzara a filtrar, juzgar o revelar sus sospechas, dejaría de ser intérprete para convertirse en un agente no autorizado del proceso. Eso viola su código deontológico, socava la confianza del sistema, y en muchos estados podría constituir una infracción ética sancionable. La imparcialidad no es opcional — es el fundamento de la profesión.',note:'SUPERIOR: Clear thesis, structured argument, professional vocabulary, broader principle cited.'},
+        {role:'T',text:'¿Cómo debería manejarse una situación en que el dialecto del testigo es tan particular que el intérprete no lo comprende plenamente?',note:'SUPERIOR PROBE: Professional dilemma + hypothesis.'},
+        {role:'C',text:'Si un intérprete no comprende plenamente el dialecto o el registro del testigo, tiene la obligación inmediata de informarlo al juez, sin esperar y sin improvisar. Interpretar lo que uno cree que el testigo dijo, cuando en realidad no se comprendió, es una falsedad procesal con consecuencias gravísimas. Lo correcto es solicitar una pausa, indicar la dificultad específica, y si es necesario, solicitar que se busque un intérprete con mayor competencia en ese dialecto. La honestidad sobre los propios límites no es una debilidad profesional — es, precisamente, la conducta más ética posible en ese contexto.',note:'SUPERIOR: Hypothetical handled, professional protocol described, ethical reasoning sustained.'},
+      ]},
+      {num:4,name:'Wind-Down',time:'~3 min',exchanges:[
+        {role:'T',text:'¿Hay algún aspecto de su preparación para el OPI que quiera compartir antes de terminar?',note:''},
+        {role:'C',text:'He enfocado mi preparación en el vocabulario jurídico de los casos que manejo diariamente — términos penales, de inmigración, y de procedimiento civil. También practico cambiar de registro según el contexto, que es algo que ya hago en el trabajo pero que quiero perfeccionar para la interpretación formal en sala.',note:''},
+      ]},
+    ],
+    rubric:{F:'Argues ethical position; hypothesizes professional dilemmas',A:'Legal and professional register sustained; no code-switching',C:'Deep engagement with court interpreter ethics and procedural law',T:'Organized, evidence-based discourse; complex turns without breakdown'},
+  },
+  {
+    title:'Mock Exam 3 — Economics, Technology & Society',
+    theme:'Topics: automation, economic inequality, global markets',
+    duration:'25–30 minutes simulated',
+    stages:[
+      {num:1,name:'Warm-Up',time:'~3 min',exchanges:[
+        {role:'T',text:'Cuénteme un poco sobre su vida cotidiana. ¿Qué hace en su tiempo libre?',note:''},
+        {role:'C',text:'Disfruto mucho la lectura, especialmente sobre temas de política pública y derecho comparado — áreas que también me ayudan en el trabajo. También me gusta estar en contacto con la comunidad hispanohablante local, ya sea como voluntaria en clínicas legales gratuitas o simplemente como miembro activa de organizaciones comunitarias.',note:''},
+      ]},
+      {num:2,name:'Level Check — Advanced',time:'~7 min',exchanges:[
+        {role:'T',text:'Cuénteme sobre cómo ha cambiado la economía de su región en los últimos años.',note:''},
+        {role:'C',text:'Desde mi perspectiva como alguien que trabaja con comunidades hispanohablantes en Utah, los cambios han sido notables. Ha habido crecimiento económico, pero también desplazamiento. Muchas familias trabajadoras que antes vivían en zonas céntricas han tenido que mudarse más lejos por el aumento del costo de vida. En el bufete donde trabajo, hemos visto un incremento en casos relacionados con disputas laborales y arrendamiento — reflejo directo de esas presiones económicas sobre las comunidades inmigrantes.',note:''},
+      ]},
+      {num:3,name:'Superior Probe — Argument',time:'~10 min',exchanges:[
+        {role:'T',text:'Usted mencionó el avance tecnológico en su región. A nivel global, ¿cree usted que la automatización representa una amenaza para el empleo o una oportunidad de progreso? Argumente.',note:'SUPERIOR PROBE: Abstract global economic argument.'},
+        {role:'C',text:'La automatización es, simultáneamente, una amenaza real y una oportunidad histórica — y la diferencia entre ambas depende exclusivamente de las decisiones políticas que tomemos como sociedad. La evidencia es clara: la automatización desplaza empleos rutinarios a un ritmo que supera la capacidad de reconversión laboral de los trabajadores afectados. Sin embargo, también genera nuevas categorías de trabajo que antes no existían. El problema no es la tecnología en sí, sino la distribución de sus beneficios. Si los gains de productividad se concentran en los accionistas y en un pequeño segmento de trabajadores altamente calificados, entonces la automatización profundizará la desigualdad. Si, por el contrario, se implementan políticas de renta básica, reconversión profesional financiada y redistribución fiscal, podría ser el motor de una sociedad con mayor tiempo libre y mayor bienestar colectivo. El capitalismo no regula eso por sí solo — requiere intervención deliberada.',note:'SUPERIOR: Complex thesis, two-sided argument, condition-consequence structure, policy proposals, principled conclusion.'},
+        {role:'T',text:'¿Qué pasaría si los países en desarrollo adoptaran masivamente la automatización sin contar con los sistemas de protección social que tienen las economías avanzadas?',note:'SUPERIOR PROBE: Global hypothetical with systemic consequences.'},
+        {role:'C',text:'Sería una trampa del desarrollo especialmente cruel. Los países en vías de desarrollo han dependido históricamente de la manufactura intensiva en mano de obra como escalón hacia la industrialización — lo que los economistas llaman la "escalera del desarrollo". Si la automatización elimina ese escalón antes de que estos países lo hayan transitado, quedarán atrapados en una posición de desventaja estructural permanente. Sin los sistemas de seguridad social necesarios, el desempleo tecnológico generaría crisis sociales de enorme magnitud — inestabilidad política, migraciones masivas, colapso de clases medias emergentes. Es un escenario que requiere cooperación internacional urgente, incluyendo transferencia tecnológica, financiamiento para la reconversión, y un replanteamiento de las reglas del comercio global.',note:'SUPERIOR: Hypothetical with global scope, multi-causal analysis, policy implications.'},
+      ]},
+      {num:4,name:'Wind-Down',time:'~3 min',exchanges:[
+        {role:'T',text:'¿Tiene algún viaje planeado próximamente?',note:''},
+        {role:'C',text:'Sí, tengo planeado asistir a un taller sobre derecho de inmigración en el otoño, organizado por la asociación de paralegales de Utah. También espero visitar a mi familia en el verano, lo cual siempre es una oportunidad para mantener el español en contexto familiar e informal.',note:''},
+      ]},
+    ],
+    rubric:{F:'Argues global economic thesis; hypothesizes systemic consequences',A:'Sustained complex discourse; economic vocabulary precise',C:'Global economic analysis beyond personal experience',T:'Multi-premise argument structure; no breakdown under abstraction'},
+  },
+  {
+    title:'Mock Exam 4 — Court Interpreting Simulation',
+    theme:'Simulated courtroom exchanges + legal vocab pressure test',
+    duration:'25–30 minutes simulated',
+    stages:[
+      {num:1,name:'Warm-Up',time:'~3 min',exchanges:[
+        {role:'T',text:'Buenos días. ¿Podría presentarse brevemente y contarme en qué área trabaja?',note:''},
+        {role:'C',text:'Con gusto. Trabajo como asistente legal bilingüe en un bufete de Utah especializado en derecho penal e inmigración. A diario sirvo de enlace entre los abogados del equipo y los clientes hispanohablantes — preparo documentación, explico el proceso legal, y en ocasiones acompaño a los abogados a audiencias como apoyo de comunicación. Busco la certificación OPI para formalizar ese rol como intérprete judicial.',note:''},
+      ]},
+      {num:2,name:'Courtroom Simulation — Advanced Level Check',time:'~8 min',exchanges:[
+        {role:'T',text:'Imagine que está interpretando en una audiencia de arraigo. El fiscal acaba de argumentar que el acusado representa un riesgo de fuga. Explíqueme cómo manejaría esa situación como intérprete.',note:'Scenario-based Advanced check.'},
+        {role:'C',text:'He estado presente en varias audiencias de arraigo como apoyo legal, así que conozco bien la dinámica. Como intérprete, mi responsabilidad sería asegurarme de que el acusado comprenda en tiempo real los argumentos del fiscal — incluyendo términos como "riesgo de fuga", "peligro para la comunidad" o "condiciones de fianza". Usaría interpretación simultánea en voz baja al oído del cliente. No interpreto lo que creo que quiso decir — interpreto exactamente lo que se dijo, en primera persona, sin añadir ni omitir.',note:''},
+        {role:'T',text:'El testigo usa términos de argot callejero que usted no comprende del todo. ¿Qué hace exactamente?',note:''},
+        {role:'C',text:'En mi trabajo como paralegal, a veces me encuentro con ese reto también. La respuesta correcta — tanto en el trabajo como en la interpretación formal — es la misma: no adivinar ni improvisar. Como intérprete, interrumpo respetuosamente, informo al juez que hay un término que no comprendo con certeza, y solicito aclaración. Si es jerga regional específica, pido que se busque un intérprete con mayor competencia en ese dialecto. La exactitud tiene que ser absoluta.',note:''},
+      ]},
+      {num:3,name:'Superior Probe — Abstract Legal Analysis',time:'~10 min',exchanges:[
+        {role:'T',text:'Desde una perspectiva más amplia: ¿en qué medida garantiza el sistema judicial estadounidense el derecho a una interpretación de calidad para los acusados con limitado dominio del inglés? ¿Es suficiente lo que existe actualmente?',note:'SUPERIOR PROBE: Abstract systemic analysis of legal rights.'},
+        {role:'C',text:'Esta pregunta me parece crucial y la respuesta honesta es: el marco legal existe, pero la implementación es profundamente desigual. La Corte Suprema estableció en Lau v. Nichols que el acceso lingüístico es un derecho civil, y el Título VI lo refuerza. Sin embargo, en la práctica, muchos tribunales de jurisdicción menor siguen usando intérpretes no certificados, familiares del acusado, o incluso menores de edad — prácticas que violan los estándares profesionales más básicos. El problema no es de voluntad legal sino de recursos y fiscalización. Los estados sin un sistema robusto de certificación, como el que está construyendo Utah, terminan relegando el acceso a la justicia a una variable de presupuesto. Eso es, en esencia, una violación sistémica del debido proceso, aunque rara vez sea nombrada como tal.',note:'SUPERIOR: Systemic legal analysis, historical reference, policy critique, principle-based conclusion.'},
+        {role:'T',text:'Si usted pudiera rediseñar el sistema de certificación de intérpretes judiciales en Utah, ¿qué cambiaría y por qué?',note:'SUPERIOR PROBE: Hypothetical policy design.'},
+        {role:'C',text:'Si pudiera rediseñar el sistema, establecería tres cambios prioritarios. Primero, haría obligatoria la certificación de nivel Approved como mínimo en todos los procedimientos que involucren privación de libertad — no como opción, sino como requisito legal sin excepción. Segundo, crearía un banco estatal de intérpretes certificados disponibles en modalidad remota para jurisdicciones rurales, donde la escasez es crítica. Y tercero, implementaría un programa de mentoría formal en el que intérpretes certificados acompañen a los candidatos durante el proceso de certificación, no solo para la evaluación del OPI, sino para la práctica real en sala. El objetivo sería cerrar la brecha entre la competencia lingüística medida y la competencia interpretativa en condiciones reales de estrés procesal.',note:'SUPERIOR: Policy hypothetical with three-point structured argument, justified with specific rationale.'},
+      ]},
+      {num:4,name:'Wind-Down',time:'~3 min',exchanges:[
+        {role:'T',text:'Ha sido una conversación muy completa. ¿Hay algo que quiera agregar antes de que terminemos?',note:''},
+        {role:'C',text:'Quisiera agregar que trabajar como asistente legal bilingüe me ha dado una perspectiva muy concreta sobre lo que está en juego cuando la interpretación falla. He visto casos donde una mala comunicación cambia el curso de una audiencia. Eso me da una motivación muy clara para prepararme bien y alcanzar el nivel que esta certificación exige.',note:''},
+      ]},
+    ],
+    rubric:{F:'Analyzes systemic legal gaps; hypothesizes policy redesign with three-point argument',A:'Legal and professional register fully sustained; no lexical breakdown',C:'Systemic legal analysis + courtroom simulation + policy design',T:'Complex multi-premise arguments; zero breakdown across all Superior tasks'},
+  },
+];
+
+let curExam=0;
+function showExam(idx){
+  curExam=idx;
+  document.querySelectorAll('.exam-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  renderExam();
+}
+
+function renderExam(){
+  const ex=exams[curExam];
+  let html=`<div style="margin-bottom:1rem;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+    <span class="badge badge-navy">${ex.theme}</span>
+    <span class="badge" style="background:#f0f4f8;color:var(--text-muted);">${ex.duration}</span>
+  </div>`;
+  ex.stages.forEach(st=>{
+    html+=`<div class="exam-stage">
+      <div class="stage-header">
+        <div class="stage-num">${st.num}</div>
+        <div class="stage-name">${st.name}</div>
+        <div class="stage-time">${st.time}</div>
+      </div>`;
+    st.exchanges.forEach(ex=>{
+      const isTester=ex.role==='T';
+      html+=`<div class="exchange ${isTester?'tester':'candidate'}">
+        <div class="exch-label ${isTester?'t':'c'}">${isTester?'Tester':'Paralegal (Spanish-English)'}</div>
+        <div class="exch-text">${ex.text}</div>
+        ${ex.note?`<div class="exch-note">${ex.note}</div>`:''}
+      </div>`;
+    });
+    html+=`</div>`;
+  });
+
+  const r=ex.rubric;
+  html+=`<div class="rubric-box">
+    <div class="rubric-title">FACT scoring rubric — this exam</div>
+    <div class="rubric-grid">
+      <div class="rubric-item"><div class="r-label">Function</div><div class="r-val">${r.F}</div></div>
+      <div class="rubric-item"><div class="r-label">Accuracy</div><div class="r-val">${r.A}</div></div>
+      <div class="rubric-item"><div class="r-label">Content</div><div class="r-val">${r.C}</div></div>
+      <div class="rubric-item"><div class="r-label">Text type</div><div class="r-val">${r.T}</div></div>
+    </div>
+  </div>`;
+
+  document.getElementById('examContent').innerHTML=html;
+}
+
+renderExam();
+</script>
+
+
+</body></html>
